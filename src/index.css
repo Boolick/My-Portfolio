@@ -7,11 +7,17 @@ h1 {
 }
 
 p {
-    @apply mb-4 text-gray-600;
+    @apply mb-4 text-gray-500;
 }
 
 a {
     @apply text-blue-400 hover:text-green-700;
+}
+
+svg {
+    width: 2rem;
+    height: 2rem;
+    fill: currentColor;
 }
 
 .underline-animation {
