@@ -1,9 +1,10 @@
+import { AboutMe } from "../../shared";
 import Layout from "../../shared/components/Layout";
 
 export const AboutPage = () => {
   return (
     <Layout>
-      <h1>About</h1>
+      <AboutMe className={"flex flex-col justify-between h-1/2 p-20"} />
     </Layout>
   );
 };

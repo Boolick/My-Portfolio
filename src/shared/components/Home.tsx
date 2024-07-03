@@ -17,7 +17,7 @@ export const Home = ({ className }: HeaderProps): React.JSX.Element => {
         </p>
         <Button text={"Download Resume"} />
       </div>
-      <img className="w-80 h-80" src="assets/profile-pic (1).png" />
+      <img className="w-80 h-80" src="assets/profile-pic (1).png" alt="Avatar photo" />
     </div>
   );
 };
