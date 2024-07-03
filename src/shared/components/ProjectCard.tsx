@@ -15,7 +15,7 @@ export const ProjectCard = ({
 }: ProjectCardProps) => {
   return (
     <div className="transform transition-transform duration-300">
-      <article className="flex items-center flex-col p-4 bg-gray-800 rounded-lg text-gray-200 shadow-md hover:bg-gray-700">
+      <article className="flex items-center flex-col p-4 bg-gray-800 rounded-3xl text-gray-200 shadow-md hover:bg-gray-700">
         <div>
           <h3>{title}</h3>
           <div className="flex flex-col items-center">
