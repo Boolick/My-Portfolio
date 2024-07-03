@@ -2,7 +2,7 @@ import Link from "./Link";
 
 export const Header = (): JSX.Element => {
   return (
-    <header className="w-full h-1/16">
+    <header className="w-full max-h-1/16 max-w-7xl m-auto">
       <div className="w-full flex justify-between gap-2 pl-20 pr-20">
         <Link text="</>" to="/" className="text-2xl"></Link>
         <Link text="About" to="/about" className="text-2xl"></Link>

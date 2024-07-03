@@ -4,7 +4,7 @@ import { Home } from "../../shared";
 export const HomePage = () => {
   return (
     <Layout>
-      <Home className={"flex flex-row justify-between h-1/2 p-20"} />
+      <Home className={"flex flex-row justify-between items-center gap-20"} />
     </Layout>
   );
 };

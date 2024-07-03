@@ -5,3 +5,4 @@ export { Button } from "./components/Button";
 export { Layout } from "./components/Layout";
 export { ProjectList } from "./components/ProjectList";
 export { AboutMe } from "./components/AboutMe";
+export { ContactsCard } from "./components/ContactsCard";

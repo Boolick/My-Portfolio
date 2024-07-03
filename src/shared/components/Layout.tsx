@@ -5,9 +5,9 @@ interface LayoutProps {
 }
 export const Layout = ({ children }: LayoutProps): React.JSX.Element => {
   return (
-    <div className="text-gray-200 bg-gray-900 min-h-screen p-8 flex flex-col">
+    <div className="text-gray-200 bg-gray-900 min-h-screen p-8 flex flex-col justify-center">
       <Header />
-      <div className="content flex-grow">{children}</div>
+      <main className="content flex-grow flex items-center justify-center m-8">{children}</main>
       <Footer />
     </div>
   );
