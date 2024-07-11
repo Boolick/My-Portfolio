@@ -1,7 +1,7 @@
 export const projects = [
   {
     iconId: "react-icon",
-    title: "Develop.",
+    title: "React",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima alias fuga et ab magnam aliquam commodi ratione vel fugit nesciunt voluptatibus.",
     gitHubLink: "https://github.com/Boolick/BlogApp",
@@ -9,7 +9,7 @@ export const projects = [
   },
   {
     iconId: "angular-icon",
-    title: "Preview.",
+    title: "Angular",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima alias fuga et ab magnam aliquam commodi ratione vel fugit nesciunt voluptatibus.",
     gitHubLink: "https://github.com/Boolick/BlogApp",
@@ -17,7 +17,7 @@ export const projects = [
   },
   {
     iconId: "javascript-icon",
-    title: "Ship.",
+    title: "JavaScript",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima alias fuga et ab magnam aliquam commodi ratione vel fugit nesciunt voluptatibus.",
     gitHubLink: "https://github.com/Boolick/BlogApp",
@@ -25,7 +25,7 @@ export const projects = [
   },
   {
     iconId: "typescript-icon",
-    title: "Profit.",
+    title: "TypeScript",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima alias fuga et ab magnam aliquam commodi ratione vel fugit nesciunt voluptatibus.",
     gitHubLink: "https://github.com/Boolick/BlogApp",
