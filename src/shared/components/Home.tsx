@@ -1,3 +1,4 @@
+import AutoText from "./AutoText";
 import { Button } from "./Button";
 
 interface HeaderProps {
@@ -6,18 +7,15 @@ interface HeaderProps {
 
 export const Home = ({ className }: HeaderProps): React.JSX.Element => {
   return (
-    <div className={`main ${className}`}>
+    <section className={`main ${className} p-4`}>
       <div className="info">
-        <h1>
-          Hello, I'm Alex, <br />
-          Web Developer
-        </h1>
-        <p>
-        I craft dynamic and imaginative web solutions that delight users.
-        </p>
+        <AutoText text={`Hello, I'm Alex, \n Frontend Developer`} speed={50} />
+        <p>I craft dynamic and imaginative web solutions that delight users.</p>
         <Button text={"Download Resume"} />
       </div>
-      <img className="w-80 h-80" src="assets/profile-pic (1).png" alt="Avatar photo" />
-    </div>
+      <div className=" max-w-80 max-h-80 shadow-custom rounded-full">
+        <img src="assets/profile-pic (1).png" alt="Avatar photo" />
+      </div>
+    </section>
   );
 };

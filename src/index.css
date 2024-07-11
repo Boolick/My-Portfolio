@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-h1 {
+h1 .auto-text {
     @apply text-4xl font-heading mb-4 text-gray-300;
 }
 
@@ -13,7 +13,9 @@ p {
 a {
     @apply text-blue-400 hover:text-green-700;
 }
-
+strong{
+    @apply font-extrabold text-green-500;
+}
 svg {
     width: 2rem;
     height: 2rem;
