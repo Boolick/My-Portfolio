@@ -1,18 +1,15 @@
-import { HomePage, AboutPage, ContactPage, PortfolioPage } from "../pages";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
+import { AnimatedRoutes } from "../features/index";
+import { Layout } from "../shared";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/portfolio" element={<PortfolioPage />} />
-        <Route path="/contacts" element={<ContactPage />} />
-      </Routes>
-    </BrowserRouter>
+      <BrowserRouter>
+        <Layout>
+          <AnimatedRoutes />
+        </Layout>
+      </BrowserRouter>
   );
 }
 
 export default App;
-

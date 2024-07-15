@@ -1,11 +1,7 @@
-import { Layout, ProjectList } from "../../shared";
+import { ProjectList } from "../../shared";
 
 export const PortfolioPage = () => {
-  return (
-    <Layout>
-      <ProjectList />
-    </Layout>
-  );
+  return <ProjectList />;
 };
 
 export default PortfolioPage;

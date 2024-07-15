@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --color-bg-light: #ffffff;
+    --color-text-light: #000000;
+    --color-bg-dark: #1a202c;
+    --color-text-dark: #edf2f7;
+}
+
+.dark {
+    --color-bg-light: var(--color-bg-dark);
+    --color-text-light: var(--color-text-dark);
+}
+
+body article {
+    background-color: var(--color-bg-light);
+    color: var(--color-text-light);
+    transition: background-color 0.5s, color 0.5s;
+}
+
 h1 .auto-text {
     @apply text-4xl font-heading mb-4 text-gray-300;
 }
@@ -13,14 +31,34 @@ p {
 a {
     @apply text-blue-400 hover:text-green-700;
 }
-strong{
+
+strong {
     @apply font-extrabold text-green-500;
 }
+
+
 svg {
     width: 2rem;
     height: 2rem;
     fill: currentColor;
 }
+
+.page-enter {
+    @apply opacity-0 transform scale-105;
+}
+
+.page-enter-active {
+    @apply opacity-100 transform scale-100 transition-opacity duration-700;
+}
+
+.page-exit {
+    @apply opacity-100 transform scale-100;
+}
+
+.page-exit-active {
+    @apply opacity-0 transform scale-95 transition-opacity duration-700;
+}
+
 
 .underline-animation {
     position: relative;
