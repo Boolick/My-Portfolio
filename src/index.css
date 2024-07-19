@@ -59,7 +59,19 @@ svg {
     @apply opacity-0 transform scale-95 transition-opacity duration-700;
 }
 
-
+.transition-flexDirection {
+    --flex-direction: row;
+    transition: flex-direction 0.5s ease;
+  }
+  
+ 
+  
+  .flex-container {
+    display: flex;
+    flex-direction: var(--flex-direction);
+  }
+  
+  
 .underline-animation {
     position: relative;
     display: inline-block;

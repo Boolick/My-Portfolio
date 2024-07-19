@@ -1,4 +1,3 @@
-// tailwind.config.js
 export default {
   darkMode: "class",
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -15,6 +14,7 @@ export default {
         opacity: "opacity",
         backgroundColor: "background-color",
         color: "color",
+        flexDirection: "flex-direction",
       },
       transitionDuration: {
         DEFAULT: "500ms",
@@ -32,6 +32,14 @@ export default {
       animation: {
         fadeIn: "fadeIn 0.5s forwards",
         fadeOut: "fadeOut 0.5s forwards",
+      },
+      screens: {
+        xsm: "320px",
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        xxl: "1440px",
       },
     },
   },
