@@ -28,7 +28,12 @@ const AutoText: React.FC<AutoTextProps> = ({ text, speed }) => {
     return () => clearTimeout(timeout);
   }, [index, speed, splitText]);
 
-  return <h1 ref={textElement} className="auto-text text-4xl text-pretty mb-10"></h1>;
+  return (
+    <h1
+      ref={textElement}
+      className="auto-text md:text-4xl sm:text-base text-pretty mb-5 p-2"
+    ></h1>
+  );
 };
 
 export default AutoText;

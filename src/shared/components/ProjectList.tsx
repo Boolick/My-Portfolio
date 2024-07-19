@@ -1,21 +1,30 @@
 import ProjectCard from "./ProjectCard";
 import { projects } from "../data/projectData";
+import AutoText from "./AutoText";
 
-export const ProjectList = () => {
+interface ProjectListProps {
+  className?: string;
+}
+export const ProjectList = ({ className }: ProjectListProps) => {
   return (
-    <ul className="grid grid-cols-2 gap-1">
-      {projects.map((project, index) => (
-        <li key={index} className="p-4">
-          <ProjectCard
-            iconId={project.iconId}
-            title={project.title}
-            description={project.description}
-            gitHubLink={project.gitHubLink}
-            deployLink={project.deployLink}
-          />
-        </li>
-      ))}
-    </ul>
+    <section
+      className={`main ${className} p-4 sm:text-base md:text-lg lg:text-xl`}
+    >
+      <AutoText text={"My Projects"} speed={100}></AutoText>
+      <ul className="grid sm:grid-cols-1 lg:grid-cols-2 gap-1 transition-all duration-300">
+        {projects.map((project, index) => (
+          <li key={index} className="p-4">
+            <ProjectCard
+              iconId={project.iconId}
+              title={project.title}
+              description={project.description}
+              gitHubLink={project.gitHubLink}
+              deployLink={project.deployLink}
+            />
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 };
 
