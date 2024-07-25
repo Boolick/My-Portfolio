@@ -1,27 +1,33 @@
-import { useLocation, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 import { Button } from "./Button";
+interface SkipButtonProps {
+  onClick: () => void;
+}
+export const SkipButton = ({ onClick }: SkipButtonProps) => {
+  const [isCoarse, setIsCoarse] = useState(false);
 
-export const SkipButton = () => {
-  const location = useLocation();
-  const navigate = useNavigate();
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(pointer: coarse)");
+    setIsCoarse(mediaQuery.matches);
 
-  const handleClick = () => {
-    if (location.pathname === "/") {
-      navigate("/about");
-    } else if (location.pathname === "/about") {
-      navigate("/portfolio");
-    } else if (location.pathname === "/portfolio") {
-      navigate("/contacts");
-    } else {
-      navigate("/");
-    }
-  };
+    const handleChange = (e: {
+      matches: boolean | ((prevState: boolean) => boolean);
+    }) => setIsCoarse(e.matches);
+    mediaQuery.addEventListener("change", handleChange);
+
+    return () => mediaQuery.removeEventListener("change", handleChange);
+  }, []);
+
   return (
-    <Button
-      text={`Next >>`}
-      onClick={handleClick}
-      className="transition-opacity duration-300 opacity-10 fixed bottom-10 right-0 hover:opacity-100"
-    />
+    <div className="relative">
+      {!isCoarse && (
+        <Button
+          text={`Next >>`}
+          onClick={onClick}
+          className={`transition-opacity duration-300 opacity-20 fixed bottom-10 right-4 hover:opacity-100`}
+        />
+      )}
+    </div>
   );
 };
 
