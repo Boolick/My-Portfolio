@@ -29,7 +29,7 @@ p {
 }
 
 a {
-    @apply text-blue-400 hover:text-green-700;
+    @apply text-blue-400;
 }
 
 strong {
@@ -62,16 +62,14 @@ svg {
 .transition-flexDirection {
     --flex-direction: row;
     transition: flex-direction 0.5s ease;
-  }
-  
- 
-  
-  .flex-container {
+}
+
+.flex-container {
     display: flex;
     flex-direction: var(--flex-direction);
-  }
-  
-  
+}
+
+
 .underline-animation {
     position: relative;
     display: inline-block;
@@ -94,4 +92,28 @@ svg {
 
 .underline-active::after {
     width: 100%;
+}
+
+@media (pointer: coarse) {
+    button:hover {
+        cursor: default;
+        opacity: 1;
+    }
+}
+
+@media (pointer: coarse) {
+
+    a::before,
+    a:hover,
+    a:focus,
+    a:active {
+        text-decoration: none;
+        transform: none;
+        color: inherit;
+    }
+
+    .underline-animation::after,
+    .underline-active::after {
+        content: none;
+    }
 }
