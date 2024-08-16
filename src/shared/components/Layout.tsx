@@ -14,7 +14,7 @@ export const Layout = ({ children }: LayoutProps): React.JSX.Element => {
     onSwipedLeft: () => handleSwipe("Right"),
     onSwipedRight: () => handleSwipe("Left"),
     trackTouch: true,
-    trackMouse: true,
+    trackMouse: false,
   });
 
   return (
