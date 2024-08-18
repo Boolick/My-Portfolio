@@ -1,5 +1,4 @@
-// src/components/AnimatedRoutes.tsx
-import { createRef } from "react";
+import React, { useRef } from "react";
 import { CSSTransition, SwitchTransition } from "react-transition-group";
 import { useLocation, Routes, Route } from "react-router-dom";
 import { HomePage, AboutPage, ContactPage, PortfolioPage } from "../../pages";
@@ -7,32 +6,25 @@ import { HomePage, AboutPage, ContactPage, PortfolioPage } from "../../pages";
 const routes = [
   {
     path: "/",
-    element: (
-        <HomePage />
-    ),
-    nodeRef: createRef<HTMLDivElement>(),
+    element: <HomePage />,
   },
   {
     path: "/about",
-    element: (
-        <AboutPage />
-    ),
-    nodeRef: createRef<HTMLDivElement>(),
+    element: <AboutPage />,
   },
   {
     path: "/portfolio",
     element: <PortfolioPage />,
-    nodeRef: createRef<HTMLDivElement>(),
   },
   {
     path: "/contacts",
     element: <ContactPage />,
-    nodeRef: createRef<HTMLDivElement>(),
   },
 ];
 
 export const AnimatedRoutes = () => {
   const location = useLocation();
+  const nodeRefs = useRef(routes.map(() => React.createRef<HTMLDivElement>()));
 
   return (
     <SwitchTransition>
@@ -41,14 +33,17 @@ export const AnimatedRoutes = () => {
         timeout={500}
         classNames="page"
         unmountOnExit
+        nodeRef={nodeRefs.current.find(
+          (_, i) => location.pathname === routes[i].path
+        )}
       >
         <div>
           <Routes location={location}>
-            {routes.map(({ path, element, nodeRef }) => (
+            {routes.map(({ path, element }, index) => (
               <Route
                 key={path}
                 path={path}
-                element={<div ref={nodeRef}>{element}</div>}
+                element={<div ref={nodeRefs.current[index]}>{element}</div>}
               />
             ))}
           </Routes>
