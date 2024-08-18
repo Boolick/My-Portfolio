@@ -36,22 +36,19 @@ const BurgerMenu: React.FC = () => {
         </svg>
       </button>
 
-      {isOpen && (
-        <div
-          className="fixed inset-0 flex justify-end z-50 backdrop-blur-sm"
-          onClick={closeMenu}
-        >
-          <div
-            className={`w-1/2 h-full bg-gray-800 shadow-lg transition-transform transform ${
-              isOpen ? "translate-x-0" : "translate-x-full"
-            } duration-500 ease-in-out`}
-          >
-            <div className="flex flex-col h-full w-fit gap-4 px-4 py-4">
-              <NavLinks />
-            </div>
+      <div
+        className={`fixed inset-0 flex justify-end z-50 backdrop-blur-sm transform ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        } transition-transform duration-500 ease-in-out`}
+        onClick={closeMenu}
+        style={{ visibility: isOpen ? "visible" : "hidden" }}
+      >
+        <div className={"w-1/2 h-full bg-gray-800 shadow-lg"}>
+          <div className="flex flex-col h-full w-fit gap-4 px-4 py-4">
+            <NavLinks />
           </div>
         </div>
-      )}
+      </div>
     </nav>
   );
 };
