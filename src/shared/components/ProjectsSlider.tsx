@@ -6,9 +6,9 @@ export const ProjectsSlider = (): JSX.Element => {
   const handleClick = (index: number) => {
     setActiveIndex(index);
   };
-  
+
   return (
-    <div className="project-slider flex w-11/12 mx-auto h-[70vh]">
+    <div className="project-slider flex w-11/12 mx-auto h-[70vh] overflow-hidden">
       {projects.map((project, index) => (
         <div
           key={index}
