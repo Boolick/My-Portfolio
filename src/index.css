@@ -43,8 +43,18 @@ svg {
     fill: currentColor;
 }
 
+.page-enter-done {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .page-enter {
     @apply opacity-0 transform scale-105;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
 }
 
 .page-enter-active {
@@ -53,10 +63,16 @@ svg {
 
 .page-exit {
     @apply opacity-100 transform scale-100;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .page-exit-active {
     @apply opacity-0 transform scale-95 transition-opacity duration-700;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .transition-flexDirection {
