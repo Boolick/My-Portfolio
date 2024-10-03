@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Button } from "./Button";
 interface SkipButtonProps {
   onClick: () => void;
@@ -17,12 +18,13 @@ export const SkipButton = ({ onClick }: SkipButtonProps) => {
 
     return () => mediaQuery.removeEventListener("change", handleChange);
   }, []);
+  const { t } = useTranslation();
 
   return (
     <div className="relative">
       {!isCoarse && (
         <Button
-          text={`Next >>`}
+          text={t("nextButton")}
           onClick={onClick}
           className={`transition-opacity duration-300 opacity-20 fixed bottom-10 right-4 hover:opacity-100`}
         />

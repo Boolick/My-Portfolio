@@ -1,15 +1,15 @@
+import { useTranslationContext } from "../../app/providers/TranslationContext";
 import Link from "./Link";
 
-enum NavLinkText {
-  HOME_ICON = "</>",
-  HOME = "Home",
-  ABOUT = "About",
-  PORTFOLIO = "Portfolio",
-  CONTACT = "Contact Me",
-}
+const NavLinkText = {
+  HOME: "nav.home",
+  ABOUT: "nav.about",
+  PORTFOLIO: "nav.portfolio",
+  CONTACT: "nav.contact",
+};
 
 interface NavLinksProps {
-  linkText: NavLinkText;
+  linkText: string;
   to: string;
 }
 const NavLinks = () => {
@@ -20,10 +20,18 @@ const NavLinks = () => {
     { linkText: NavLinkText.CONTACT, to: "/contacts" },
   ];
 
+  const { t } = useTranslationContext();
+
   return (
     <>
       {links.map(({ linkText, to }) => (
-        <Link key={to} text={linkText} to={to} className="text-2xl" isCoarse />
+        <Link
+          key={to}
+          text={t(linkText)}
+          to={to}
+          className="text-2xl"
+          isCoarse
+        />
       ))}
     </>
   );
