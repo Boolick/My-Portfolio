@@ -7,3 +7,4 @@ export { ProjectList } from "./components/ProjectList";
 export { AboutMe } from "./components/AboutMe";
 export { ContactsCard } from "./components/ContactsCard";
 export { SkipButton } from "./components/SkipButton";
+export { ProjectsSlider } from "./components/ProjectsSlider";

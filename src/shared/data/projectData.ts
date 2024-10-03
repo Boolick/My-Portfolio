@@ -1,14 +1,16 @@
 export const projects = [
   {
-    iconId: "react-icon",
-    title: "React",
+    iconId:
+      "https://images.unsplash.com/photo-1516061321177-2b50bd5a2b42?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "Rick And Morty Universe",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima alias fuga et ab magnam aliquam commodi ratione vel fugit nesciunt voluptatibus.",
-    gitHubLink: "https://github.com/Boolick/BlogApp",
-    deployLink: "https://admirable-pithivier-c7f96b.netlify.app/",
+    gitHubLink: "https://github.com/Boolick/RickAndMorty-Universe",
+    deployLink: "https://boolick.github.io/RickAndMorty-Universe/",
   },
   {
-    iconId: "angular-icon",
+    iconId:
+      "https://images.unsplash.com/photo-1594904351111-a072f80b1a71?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Angular",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima alias fuga et ab magnam aliquam commodi ratione vel fugit nesciunt voluptatibus.",
@@ -16,7 +18,8 @@ export const projects = [
     deployLink: "https://admirable-pithivier-c7f96b.netlify.app/",
   },
   {
-    iconId: "javascript-icon",
+    iconId:
+      "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "JavaScript",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima alias fuga et ab magnam aliquam commodi ratione vel fugit nesciunt voluptatibus.",
@@ -24,7 +27,8 @@ export const projects = [
     deployLink: "https://admirable-pithivier-c7f96b.netlify.app/",
   },
   {
-    iconId: "typescript-icon",
+    iconId:
+      "https://images.unsplash.com/photo-1566198602184-30a482db864a?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "TypeScript",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima alias fuga et ab magnam aliquam commodi ratione vel fugit nesciunt voluptatibus.",

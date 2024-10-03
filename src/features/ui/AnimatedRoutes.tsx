@@ -37,7 +37,7 @@ export const AnimatedRoutes = () => {
           (_, i) => location.pathname === routes[i].path
         )}
       >
-        <div>
+        <>
           <Routes location={location}>
             {routes.map(({ path, element }, index) => (
               <Route
@@ -47,7 +47,7 @@ export const AnimatedRoutes = () => {
               />
             ))}
           </Routes>
-        </div>
+        </>
       </CSSTransition>
     </SwitchTransition>
   );

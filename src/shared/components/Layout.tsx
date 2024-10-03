@@ -23,7 +23,7 @@ export const Layout = ({ children }: LayoutProps): React.JSX.Element => {
       {...handlers}
     >
       <Header />
-      <main className="content flex-grow flex items-center justify-center m-8 relative xsm:m-2 ">
+      <main className="content w-full flex-grow flex items-center justify-center m-8 relative xsm:m-2 ">
         {children}
         <SkipButton onClick={() => handleSwipe("Right")} />
       </main>
