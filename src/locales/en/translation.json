@@ -1,0 +1,24 @@
+{
+  "home": {
+    "greeting": "Hello, I'm Alex, \n Frontend Developer",
+    "description": "I craft dynamic and imaginative web solutions that delight users."
+  },
+  "about": {
+    "title": "About Me",
+    "description": "Skilled engineer with a background in technology and a newfound passion for web development. Proven skills in optimizing processes, quality control, and  effective communication. Transitioned into a web developer role, eager to contribute my diverse skills to the world of frontend development"
+  },
+  "nextButton": "Next >>",
+  "downloadResumeButton": "Download Resume",
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "portfolio": "Portfolio",
+    "contact": "Contact Me"
+  },
+  "portfolio": {
+    "title": "My Projects"
+  },
+  "contacts": {
+    "title":"Contact with me"
+  }
+}

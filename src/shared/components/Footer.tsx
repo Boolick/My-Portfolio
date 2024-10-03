@@ -44,7 +44,7 @@ export const Footer = () => {
         <a href="#" className="bx bxl-facebook-square hover:scale-125"></a>
         <a href={phoneNumber} className="bx bxs-phone hover:scale-125"></a>
       </div>
-      <p>Copyright ©2024, All rights reserved.</p>
+        <span>Copyright ©2024, All rights reserved.</span>
     </footer>
   );
 };

@@ -23,7 +23,7 @@ const BurgerMenu: React.FC = () => {
   return (
     <nav className="relative flex justify-end">
       <button
-        className="md:hidden fixed flex items-center px-3 py-2 border rounded text-blue-200 border-blue-400 hover:text-white hover:border-white z-50"
+        className="md:hidden fixed top-2 flex items-center px-3 py-3 border ring-2 rounded text-blue-200 border-blue-600 hover:text-white hover:border-white z-50"
         onClick={toggleMenu}
       >
         <svg
