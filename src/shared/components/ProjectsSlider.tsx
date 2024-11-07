@@ -12,7 +12,7 @@ export const ProjectsSlider = (): JSX.Element => {
       {projects.map((project, index) => (
         <div
           key={index}
-          className={`relative flex-1 m-2 rounded-lg transition-[flex] duration-700 ease-in-out cursor-pointer ${
+          className={`relative flex-1 m-2 rounded-lg transition-[flex] duration-700 ease-in-out ${
             activeIndex === index ? "flex-[5]" : "flex-[0.5]"
           }`}
           style={{
@@ -30,7 +30,7 @@ export const ProjectsSlider = (): JSX.Element => {
             {project.title}
           </h3>
           <p
-            className={`absolute bottom-5 left-5 transition-opacity duration-500 ${
+            className={`absolute bottom-8 left-5 text-gray-200 transition-opacity duration-500 ${
               activeIndex === index ? "opacity-100" : "opacity-0"
             }`}
           >
